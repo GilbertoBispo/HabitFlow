@@ -1,5 +1,6 @@
 'use client';
 
+import { div, li } from "motion/react-client";
 // importing useState and useRef
 import { useState, useRef } from "react";
 
@@ -20,19 +21,51 @@ export default function Header() {
         }
     }
 
+    // defining the links
+    const links = [
+        {
+            id: 0,
+            text: "Dashboard"
+        },
+        {
+            id: 1,
+            text: "Features"
+        },
+        {
+            id: 2,
+            text: "Analytics"
+        },
+        {
+            id: 3,
+            text: "Pricing"
+        }
+    ];
+
     return (
-        <header className="h-16 flex items-center px-5 justify-between">
+        <header className="h-16 flex items-center  justify-between">
             <div className="">
-                <img className="h-16" src="/logo.png" alt="HabitFlow logo" />
+                <a href="">
+                    <img className="h-16" src="/logo.png" alt="HabitFlow logo" />
+                </a>
             </div>
 
             {/* links */}
-            <div className="bg-amber-200 hidden">
-                <ul className="flex gap-5">
-                    <li>Dashboard</li>
-                    <li>Features</li>
-                    <li>Analytics</li>
-                    <li>Pricing</li>
+            <div className={`z-1 absolute -translate-y-full transition-all duration-500 w-full ${isActive ? 'inline-block  translate-y-50 m-auto' : ' transition-all duration-500'}`}>
+                <ul className="flex gap-5 flex-col items-center">
+                    {
+                        links.map((link, index) => {
+                            // taking the text attribute from the objects
+                            const linkText = link.text;
+
+                            return (
+                                <li className="text-xl p-5" key={index}>
+                                    <a className=" p-5 " href="">
+                                        <strong>{linkText}</strong>
+                                    </a>
+                                </li>
+                            );
+                        })
+                    }
                 </ul>
             </div>
 
