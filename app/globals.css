@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --primary: #ef4444;
-  --hover: #dc2626;
   --card-background: #fff1f2;
-  --titles: #18181b;
-  --text: #52525b;
+  --background: #F8F7F5;
+  --primary: #ef4444;
   --border: #e4e4e7;
+  --titles: #18181b;
+  --hover: #dc2626;
+  --text: #52525b;
+  --menu: #16161b;
 }
 
 @theme inline {
-  --color-background: var(--background);
   --font-jakarta: var(--font-plus-jakarta-sans);
+  --color-background: var(--background);
 }
 
 body {
+  font-family: var(--font-jakarta), sans-serif;
   background: var(--background);
   color: var(--text);
-  font-family: var(--font-jakarta), sans-serif;
 }
