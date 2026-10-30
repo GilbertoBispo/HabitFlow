@@ -1,6 +1,5 @@
 'use client';
 
-import { div, li } from "motion/react-client";
 // importing useState and useRef
 import { useState, useRef } from "react";
 
@@ -42,7 +41,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="h-16 flex items-center  justify-between">
+        <header className="h-16 flex items-center justify-between">
             <div className="">
                 <a href="">
                     <img className="h-16" src="/logo.png" alt="HabitFlow logo" />
@@ -50,27 +49,28 @@ export default function Header() {
             </div>
 
             {/* links */}
-            <div className={`z-1 absolute -translate-y-full transition-all duration-500 w-full ${isActive ? 'inline-block  translate-y-50 m-auto' : ' transition-all duration-500'}`}>
-                <ul className="flex gap-5 flex-col items-center">
-                    {
-                        links.map((link, index) => {
-                            // taking the text attribute from the objects
-                            const linkText = link.text;
-
-                            return (
-                                <li className="text-xl p-5" key={index}>
-                                    <a className=" p-5 " href="">
-                                        <strong>{linkText}</strong>
-                                    </a>
-                                </li>
-                            );
-                        })
-                    }
-                </ul>
+            <div className={`z-1 absolute -translate-y-full transition-all duration-500 w-full h-full bg-white/50 backdrop-blur-lg ${isActive ? 'inline-block  translate-y-50 m-auto' : ' transition-all duration-500'}`}>
+                <nav className="h-full flex flex-col justify-center">
+                    <ul className="flex gap-5 flex-col items-center">
+                        {
+                            links.map((link, index) => {
+                                // taking the text attribute from the objects
+                                const linkText = link.text;
+                                return (
+                                    <li className="text-xl p-5" key={index}>
+                                        <a className="text-(--menu) p-5 hover:text-(--text) font-bold" href="">
+                                            {linkText}
+                                        </a>
+                                    </li>
+                                );
+                            })
+                        }
+                    </ul>
+                </nav>
             </div>
 
             {/* menu button for mobile devices */}
-            <div className="w-16 h-full">
+            <div className="w-16 h-full z-2">
                 <button ref={menuButton} onClick={handleClick} className="w-full h-full flex flex-col items-center justify-center gap-2">
                     <span className={`inline-block bg-(--menu) w-7 h-0.5 ${isActive ? 'w-9 rotate-45 transition-all duration-200 translate-y-2.5' : 'rotate-0 transition-all duration-200'}`}></span>
                     <span className={`inline-block bg-(--menu) w-7 h-0.5 ${isActive ? 'opacity-0' : 'rotate-0 transition-all duration-200'}`}></span>
