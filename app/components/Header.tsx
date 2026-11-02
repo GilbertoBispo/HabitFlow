@@ -24,18 +24,14 @@ export default function Header() {
     const links = [
         {
             id: 0,
-            text: "Dashboard"
-        },
-        {
-            id: 1,
             text: "Features"
         },
         {
-            id: 2,
-            text: "Analytics"
+            id: 1,
+            text: "About"
         },
         {
-            id: 3,
+            id: 2,
             text: "Pricing"
         }
     ];
@@ -49,7 +45,7 @@ export default function Header() {
             </div>
 
             {/* links */}
-            <div className={`z-1 absolute -translate-y-full transition-all duration-500 w-full h-full bg-white/50 backdrop-blur-lg ${isActive ? 'inline-block  translate-y-50 m-auto' : ' transition-all duration-500'}`}>
+            <div className={`z-1 absolute -translate-y-full transition-all duration-500 w-full h-screen bg-white/50 backdrop-blur-lg ${isActive ? 'inline-block translate-y-50 m-auto shadow-lg' : 'shadow-lg transition-all duration-500'}`}>
                 <nav className="h-full flex flex-col justify-center">
                     <ul className="flex gap-5 flex-col items-center">
                         {
