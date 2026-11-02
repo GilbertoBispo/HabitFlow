@@ -5,7 +5,7 @@ interface SubTitle {
 
 export default function SubTitle({ children, className }: SubTitle) {
     return(
-        <h3 className={`text-lg ${className}`}>
+        <h3 className={`text-lg text-center ${className}`}>
             <em>
                 {children}
             </em>

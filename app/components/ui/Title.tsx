@@ -5,7 +5,7 @@ interface TypeTitle {
 
 export default function Title({ children, className }: TypeTitle) {
     return (
-        <h2 className={`text-2xl text-(--titles) ${className}`}>
+        <h2 className={`text-2xl text-(--titles) text-center ${className}`}>
             <strong>
                 {children}
             </strong>
