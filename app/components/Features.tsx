@@ -1,4 +1,5 @@
 import Card from "./ui/Card";
+import Section from "./ui/Section";
 import { Flame, Zap, ChartColumn } from "lucide-react";
 
 export default function Features() {
@@ -25,7 +26,7 @@ export default function Features() {
     ];
 
     return(
-        <section className="flex flex-col gap-5 p-5 items-center">
+        <Section>
             <h2 className="text-2xl text-(--titles)"><strong>Features</strong></h2>
 
             <div className="flex flex-col gap-5">
@@ -46,6 +47,6 @@ export default function Features() {
                     );
                 })}
             </div>
-        </section>
+        </Section>
     );
 };
