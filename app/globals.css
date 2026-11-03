@@ -12,6 +12,10 @@
   --menu: #16161b;
 }
 
+.active-faq {
+  display: block;
+}
+
 @theme inline {
   --font-jakarta: var(--font-plus-jakarta-sans);
   --color-background: var(--background);
