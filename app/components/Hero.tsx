@@ -11,7 +11,7 @@ export default function Header() {
                 The smartest way to build the life you want.
             </SubTitle>
 
-            <p className="text-center text-lg">Track your daily progress, stay accountable, and build unstoppable momentum with HabitFlow’s intuitive and distraction-free interface.</p>
+            <p className="text-center text-lg md:w-[80dvw]">Track your daily progress, stay accountable, and build unstoppable momentum with HabitFlow’s intuitive and distraction-free interface.</p>
             
             <Button className="">Start Tracking Now!</Button>
 

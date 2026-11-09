@@ -37,7 +37,7 @@ export default function Features() {
                     const text = feature.text;
                     
                     return(
-                        <Card disableProp={true} key={index}>
+                        <Card disableProp={true} key={index} className="md:w-[70dvw]">
                             <div className="flex gap-5 items-center">
                                 <Icon size={40}></Icon>
                                 <h2 className="text-lg w-[80%] text-(--titles)"><strong>{title}</strong></h2>
