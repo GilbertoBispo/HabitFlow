@@ -9,7 +9,7 @@ export default function Footer() {
                     <p className="text-center"><em>Build better routines, track your progress, and master your daily flow.</em></p>
                 </div>
 
-                <div className="flex gap-20">
+                <div className="flex gap-20 md:gap-40">
                     <div>
                         <h3 className="font-bold p-5">Product</h3>
                         <ul className="flex flex-col items-center gap-5">

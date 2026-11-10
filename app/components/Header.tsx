@@ -65,8 +65,26 @@ export default function Header() {
                 </nav>
             </div>
 
+            <nav className="hidden lg:block">
+                <ul className="flex">
+                    {
+                        links.map((link, index) => {
+                            // taking the text attribute from the objects
+                            const linkText = link.text;
+                            return (
+                                <li className="text-xl p-5" key={index}>
+                                    <a className="text-(--menu) p-5 hover:text-(--text) font-bold" href="">
+                                        {linkText}
+                                    </a>
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+            </nav>
+
             {/* menu button for mobile devices */}
-            <div className="w-16 h-full z-2">
+            <div className="w-16 h-full z-2 lg:hidden">
                 <button ref={menuButton} onClick={handleClick} className="w-full h-full flex flex-col items-center justify-center gap-2">
                     <span className={`inline-block bg-(--menu) w-7 h-0.5 ${isActive ? 'w-9 rotate-45 transition-all duration-200 translate-y-2.5' : 'rotate-0 transition-all duration-200'}`}></span>
                     <span className={`inline-block bg-(--menu) w-7 h-0.5 ${isActive ? 'opacity-0' : 'rotate-0 transition-all duration-200'}`}></span>

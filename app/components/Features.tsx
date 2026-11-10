@@ -30,14 +30,14 @@ export default function Features() {
         <Section>
             <Title>Features</Title>
 
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 lg:flex-row lg:flex-wrap lg:justify-center">
                 {features.map((feature, index) => {
                     const title = feature.title;
                     const Icon = feature.icon;
                     const text = feature.text;
                     
                     return(
-                        <Card disableProp={true} key={index}>
+                        <Card disableProp={true} key={index} className="md:w-[70dvw] lg:w-90">
                             <div className="flex gap-5 items-center">
                                 <Icon size={40}></Icon>
                                 <h2 className="text-lg w-[80%] text-(--titles)"><strong>{title}</strong></h2>
