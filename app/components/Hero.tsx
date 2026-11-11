@@ -13,7 +13,7 @@ export default function Header() {
 
             <p className="text-center text-lg md:w-[80dvw]">Track your daily progress, stay accountable, and build unstoppable momentum with HabitFlow’s intuitive and distraction-free interface.</p>
             
-            <Button className="">Start Tracking Now!</Button>
+            <a href="/app"><Button className="">Start Tracking Now!</Button></a>
 
             <a href="" className="underline">Learn more...</a>
         </Section>
